@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Letter Sounds — Phonics Tiles</title>
+<meta name="description" content="Tap a big colorful tile to hear its letter sound or name — a simple phonics practice tool for young learners.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="phonics-body">
+
+<div class="phonics-wrap">
+
+  <div class="phonics-top">
+    <div class="phonics-title-block">
+      <h1 class="phonics-title">Letter Sounds</h1>
+      <p class="phonics-sub">Tap a tile to hear it!</p>
+    </div>
+  </div>
+
+  <div class="mode-toggle" role="tablist" aria-label="Practice mode">
+    <button type="button" class="mode-btn is-active" data-mode="sound" role="tab" aria-selected="true">Sounds</button>
+    <button type="button" class="mode-btn" data-mode="name" role="tab" aria-selected="false">Names</button>
+  </div>
+
+  <div class="stage" id="stage" aria-live="polite">
+    <span class="stage-letter" id="stageLetter">?</span>
+    <div class="stage-body">
+      <span class="stage-word" id="stageWord">Tap a tile to begin</span>
+      <span class="stage-hint">Tap the speaker to hear it again</span>
+    </div>
+    <button type="button" class="stage-replay" id="stageReplay" aria-label="Replay sound">&#128266;</button>
+  </div>
+
+  <div class="progress-row">
+    <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+    <span class="progress-text" id="progressText">0 / 26 sounds practiced</span>
+  </div>
+
+  <div class="tile-grid" id="tileGrid"></div>
+
+  <div class="phonics-footer">
+    <button type="button" class="reset-btn" id="resetProgress">Reset progress</button>
+  </div>
+
+</div>
+
+<div class="celebration" id="celebration">&#127881; All 26 done — great job!</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
